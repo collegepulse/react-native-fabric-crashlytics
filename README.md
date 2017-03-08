@@ -1,16 +1,24 @@
+react-native-stacktrace
+=======================
 
-react-native-fabric-crashlytics
-===============================
-
-Reports javascript exceptions in React Native to the Crashlytics server, using the react-native-fabric library.
+Drop-in support for capturing errors from React Native's global error handler. Pass in a custom configuration function to log errors wherever you want.
 
 Usage
 -----
 
 To use, add this code to your index.ios.js and index.android.js (or some library included by both).
 
-```
-// Already assumes that Fabric is initialized/configured properly in the iOS and Android app startup code.
-import crashlytics from 'react-native-fabric-crashlytics';
-crashlytics.init();
+Call the `init` function. It takes a single function which returns a `Promise`.
+
+```js
+import stacktrace from 'react-native-stacktrace';
+
+stacktrace.init(function onError(err, isFatal) {
+  return new Promise((resolve, reject) => {
+    // log to your own logging service
+    return doAsyncThingWithError(err, isFatal)
+      .then(resolve)
+      .catch(reject);
+  });
+});
 ```

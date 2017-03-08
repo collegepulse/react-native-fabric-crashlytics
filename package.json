@@ -1,25 +1,26 @@
 {
-  "name": "react-native-fabric-crashlytics",
-  "version": "0.1.8",
-  "description": "",
+  "name": "react-native-stacktrace",
+  "version": "1.0.0",
+  "description": "Drop-in support for capturing errors from React Native's global error handler.",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint *.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "files": [
     "index.js"
   ],
   "bugs": {
-    "url": "https://github.com/mikelambert/react-native-fabric-crashlytics/issues"
+    "url": "https://github.com/collegepulse/react-native-stacktrace/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/mikelambert/react-native-fabric-crashlytics.git"
+    "url": "git+ssh://git@github.com/collegepulse/react-native-stacktrace.git"
   },
   "maintainers": [
     {
-      "email": "mlambert@gmail.com",
-      "name": "Mike Lambert"
+      "email": "peter.mikitsh@gmail.com",
+      "name": "Peter Mikitsh"
     }
   ],
   "keywords": [
@@ -29,17 +30,21 @@
     "react",
     "mobile",
     "ios",
-    "android",
-    "fabric",
-    "crashlytics"
+    "android"
   ],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "lodash.assign": "^4.2.0",
-    "stacktrace-js": "^1.1.0"
-  },
+  "dependencies": {},
   "peerDependencies": {
-    "react-native-fabric": "*"
+    "react-native": "^0.42.0"
+  },
+  "devDependencies": {
+    "eslint": "3.17.1",
+    "eslint-config-airbnb": "14.1.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "6.10.0",
+    "eslint-plugin-react-native": "2.3.1",
+    "react-native": "0.42.0"
   }
 }
